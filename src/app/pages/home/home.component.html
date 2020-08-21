@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>POKEDEX </h2>
+    <hr>
+
+    <div class="search">
+        <mat-form-field>
+            <mat-label>
+                Buscar
+            </mat-label>
+            <input matInput type="search" (input)="filterItem($event.target.value)" placeholder="Buscar">
+        </mat-form-field>
+        <mat-icon>search</mat-icon>
+    </div>
+    <div class="pokemones">
+        <div *ngFor="let item of filteredItems">
+            <a title="Ver Pokemon" [routerLink]="['/detail',item.id]">
+                <div class="cardpokemon">
+                    <mat-card [class.mat-elevation-z3]="true">
+                        <h3><strong>{{item.name | titlecase}}</strong></h3>
+                        <img [src]="item.image">
+                        <br>
+                        <!-- <span>{{item.name}}</span> -->
+                    </mat-card>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

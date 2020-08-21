@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+$break-small: 600px;
+$break-large: 1000px;
+.container {
+    width: 90%;
+    padding: 10px;
+    margin-inline: auto;
+    margin-top: 1rem;
+}
+
+mat-card {
+    margin-top: 1rem;
+}
+
+.tbar {
+    position: relative;
+    background: red;
+    color: white;
+    z-index: 2;
+    display: flex;
+    mat-toolbar-row {
+        @media screen and (max-width: $break-small) {
+            flex-direction: column;
+            justify-content: space-between;
+            flex-basis: 100%;
+            flex: 1;
+        }
+        @media screen and (min-width: $break-large) {
+            flex-direction: row;
+            justify-content: space-between;
+            .casa {
+                margin-right: 10%;
+            }
+        }
+    }
+}

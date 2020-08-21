@@ -1,0 +1,41 @@
+.card-login {
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    mat-card {
+        min-width: 20%;
+        margin-top: 15%;
+    }
+    mat-form-field {
+        display: flex;
+        flex-direction: column;
+    }
+    button {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+hr {
+    color: #306fff
+}
+
+h1 {
+    text-align: center;
+    color: #306fff
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.container-fondo {
+    height: 100vh;
+    background-size: cover;
+    background-image: url('../../../assets/images/fondo.jpg');
+    background-repeat: no-repeat;
+}

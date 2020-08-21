@@ -1,0 +1,29 @@
+<div class="container">
+    <mat-card [class.mat-elevation-z3]="true">
+        <h2>Detalle Pokemon</h2>
+        <hr>
+        <div class="info">
+            <div class="imagen">
+                <img [src]="pokemon?.sprites.front_default">
+            </div>
+            <div class="column">
+                <ul>
+                    <li><strong>#Id: </strong>{{id}}</li>
+                    <li><strong>Nombre: </strong> {{pokemon?.name | titlecase}} </li>
+                    <li><strong>{{pokemon?.types.length == 1? 'Tipo:': 'Tipos:'}}</strong></li>
+                    <ul *ngFor="let tipos of pokemon?.types">
+                        <li>{{tipos.type.name | titlecase}}</li>
+                    </ul>
+                    <li><strong>Altura: </strong>{{pokemon?.height}}</li>
+                    <li><strong>Peso: </strong>{{pokemon?.weight}}</li>
+                </ul>
+            </div>
+            <div class="movimientos">
+                <li><strong>Lista Movimientos </strong></li>
+                <ul *ngFor="let move of pokemon?.moves">
+                    <li>{{move.move.name | titlecase}}</li>
+                </ul>
+            </div>
+        </div>
+    </mat-card>
+</div>

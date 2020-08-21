@@ -1,0 +1,46 @@
+$break-small: 600px;
+$break-large: 1000px;
+.pokemones {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 50%;
+    gap: 5%;
+    margin-inline: auto;
+    justify-content: center;
+    mat-card {
+        min-width: 100px;
+        @media screen and (max-width: $break-small) {
+            max-width: 40%;
+        }
+        align-content: center;
+        &:hover,
+        &:active {
+            border: 1px solid #306fff;
+        }
+        h3 {
+            font-style: italic;
+            font-style: 12px;
+        }
+    }
+}
+
+.cardpokemon {
+    @media screen and (max-width: $break-small) {
+        display: flex;
+        flex-direction: column wrap;
+        flex-basis: 100%;
+        flex: 2;
+    }
+    @media screen and (min-width: $break-large) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+h2 {
+    text-align: center;
+}
+
+.search {
+    margin-top: 1rem;
+}
