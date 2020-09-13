@@ -32,8 +32,10 @@ describe('LoginComponent', () => {
     const form = component.frmLogin;
     expect(form.valid).toBeFalsy();
 
-    const nameInput = form.controls.email;
+    const nameInput = form.controls.email.value;
+    const pass = form.controls.password.value;
     nameInput.setValue('acpleno93@gmail.com');
+    nameInput.setValue('123');
 
     expect(form.valid).toBeTruthy();
   })
